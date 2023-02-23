@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #border-out{
+            position: relative;
+            width: 400px;
+            height: 190px;
+            text-align: center;
+            background: linear-gradient( to bottom right, #ea05f5, orange);
+        }
+        #border-in{
+            position: absolute;
+            width: 95%;
+            height: 90%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 10px;
+            background-color: white;
+            overflow: hidden;
+        }
+        .arrow{
+            position: absolute;
+            width: 100%;
+            top: 30%;
+        }
+        .arrow a{
+            float: left;
+            text-decoration: none;
+            font-size: 50px;
+            padding: 5px;
+        }
+        .arrow a:last-child{
+            float: right;
+        }
+        .dots{
+            display: flex;
+            position: absolute;
+            left: 35%;
+            bottom: 4%;
+            margin-left: 0;
+            margin-right: 0;
+            padding-left: 15px;
+            padding-right: 15px;
+            list-style: none;
+        }
+        .dots span{
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: black;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        .number{
+            animation: slide 12s infinite;
+            scroll-behavior: smooth;
+        }
+        .number p{
+            font-size: 30px;
+            font-weight: bold;
+            width: 380px;
+            height: 185px;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        @keyframes slide {
+            0%{
+                margin-top: 0%;
+            }
+            25%{
+                margin-top: -50%;
+            }
+            50%{
+                margin-top: -100%;
+            }
+            75%{
+                margin-top: -150%;
+            }
+            100%{
+                margin-top: 0%;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="border-out">
+    <div id="border-in">
+        <div class="arrow">
+            <a href="#slide-1"><</a>
+            <a href="">></a>
+        </div>
+        <div>
+            <div class="number">
+                <p id="slide-1">1</p>
+                <p id="2">2</p>
+                <p id="3">3</p>
+                <p id="4">4</p>
+            </div>
+            <div class="dots">
+                <span><a href="#slide-1"></a></span>
+                <span><a href="#2"></a></span>
+                <span><a href="#3"></a></span>
+                <span><a href="#4"></a></span>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
